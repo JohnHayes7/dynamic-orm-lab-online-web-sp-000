@@ -60,8 +60,6 @@ class InteractiveRecord
     value = kv_pair.values.first
       sql = "SELECT * FROM #{self.table_name} WHERE key = value"
       DB[:conn].execute(sql)
-    
-      
   end
   
   
