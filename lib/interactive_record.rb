@@ -57,7 +57,7 @@ class InteractiveRecord
   
   def self.find_by(kv_pair)
     key = kv_pair.keys.first 
-    value = kv_pair.values
+    value = kv_pair.values.first
     binding.pry
       sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
       DB[:conn].execute(sql)
