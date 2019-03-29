@@ -57,8 +57,6 @@ class InteractiveRecord
   
   def self.find_by(kv_pair)
       binding.pry
-    
-    
   end
   
   
