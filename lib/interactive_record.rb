@@ -56,7 +56,7 @@ class InteractiveRecord
   end
   
   def self.find_by(kv_pair)
-    key = kv_pair.key
+    key = kv_pair.keys
       sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
       DB[:conn].execute(sql)
     end
