@@ -59,7 +59,7 @@ class InteractiveRecord
     key = kv_pair.keys.join() 
     value = kv_pair.values.first
     sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
-    binding.pry
+    # binding.pry
     DB[:conn].execute(sql, key, value)
   end
   
