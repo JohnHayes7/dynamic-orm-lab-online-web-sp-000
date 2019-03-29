@@ -59,7 +59,7 @@ class InteractiveRecord
     key = kv_pair.keys.join() 
     value = kv_pair.values.first
     sql = "SELECT * FROM #{self.table_name} WHERE #{key} = ? "
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, value)
   end
   
   
