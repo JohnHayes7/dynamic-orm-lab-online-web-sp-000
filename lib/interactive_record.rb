@@ -55,9 +55,9 @@ class InteractiveRecord
     DB[:conn].execute(sql, name)
   end
   
-  def self.find_by({:key => value})
+  def self.find_by(kv_pair)
       binding.pry
-    sql = "SELECT * FROM #{self.table_name} WHERE #{row[:key]} = #{ "
+    
     
   end
   
