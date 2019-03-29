@@ -58,8 +58,8 @@ class InteractiveRecord
   def self.find_by(kv_pair)
     key = kv_pair.keys.join() 
     value = kv_pair.values.first
-    sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
-    DB[:conn].execute(sql, key, value)
+    sql = "SELECT * FROM #{self.table_name} WHERE #{key} = #{value}"
+    DB[:conn].execute(sql)
   end
   
   
