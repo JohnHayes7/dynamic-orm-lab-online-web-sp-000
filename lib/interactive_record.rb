@@ -39,7 +39,6 @@ class InteractiveRecord
     values = []
     self.class.column_names.each do |c_name|
       values <<"'#{send(c_name)}'" unless send(c_name).nil?
-      binding.pry
     end
     values.join(", ")
   end
