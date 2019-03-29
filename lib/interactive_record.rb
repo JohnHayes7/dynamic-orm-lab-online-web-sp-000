@@ -56,7 +56,7 @@ class InteractiveRecord
   end
   
   def self.find_by(kv_pair)
-    kv_pair.each do |k, v|
+    
       sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
       DB[:conn].execute(sql, k, v)
     end
